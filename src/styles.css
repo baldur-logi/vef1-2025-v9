@@ -14,3 +14,46 @@ html {
 }
 
 /* TODO einfalt viðmót */
+
+body {
+  font-family: sans-serif;
+  margin: 20px;
+}
+
+h1 {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.art-searcher form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 10px;
+}
+
+.art-searcher input {
+  padding: 8px;
+  border: 1px solid #ccc;
+}
+
+.art-searcher button {
+  font-weight: bold;
+  padding: 8px;
+  background: lightgreen;
+  color: black;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  body {
+    margin: 10px;
+  }
+
+  h1 {
+    font-size: 18px;
+  }
+}
