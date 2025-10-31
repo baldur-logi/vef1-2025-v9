@@ -27,6 +27,25 @@ export async function search(query) {
     return jsonResult;
   } catch (err) {
     console.error("villa í fetch", err);
-    return null
+    return null;
+  }
+}
+
+/**
+ * Sækir upplýsingar um eitt listaverk eftir id úr api
+ * @param {number|string} id 
+ * @returns {Promise<Object|null>} - data fyrir listaverk eða null ef villa
+ */
+export async function getArtworkById(id) {
+  const url = "https://api.artic.edu/api/v1/artworks/" + id;
+
+  try {
+    const res = await fetch(url);
+    if (!res.ok) throw new Error("Villa í fetch fyrir artwork id " + id);
+    const json = await res.json();
+    return json.data;
+  } catch (err) {
+    console.error(err);
+    return null;
   }
 }

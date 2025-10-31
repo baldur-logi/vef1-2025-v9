@@ -1,17 +1,13 @@
-// TODO leit í API
-// TODO Sýna niðurstöður á síðunni
-import { searchFrom } from "./lib/art.js";
-import { el } from "./lib/elements.js";
+import { searchFrom, showArt } from "./lib/art.js";
 
-const artSearcher = document.querySelector(".art-searcher");
-
+const searchDiv = document.querySelector(".art-searcher");
 const id = new URLSearchParams(window.location.search).get("id");
 
-if (artSearcher instanceof HTMLElement) {
-  if (id) {
-    const artworkEl = el("p", {}, "Sýna listaverk með id " + id);
-    artSearcher?.appendChild(artworkEl);
-  } else {
-    searchFrom(artSearcher);
-  }
+// Sýna listaverk ef það er id í url, annars sýna search bar
+if (searchDiv instanceof HTMLElement) {
+    if (id) {
+        showArt(searchDiv, id);
+    } else {
+        searchFrom(searchDiv);
+    }
 }

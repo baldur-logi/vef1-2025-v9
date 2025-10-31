@@ -13,8 +13,6 @@ html {
   box-sizing: inherit;
 }
 
-/* TODO einfalt viðmót */
-
 body {
   font-family: sans-serif;
   margin: 20px;
@@ -22,26 +20,26 @@ body {
 
 h1 {
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 .art-searcher form {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 10px;
   width: 100%;
   max-width: 400px;
-  margin-bottom: 10px;
+  margin-bottom: 11px;
 }
 
 .art-searcher input {
   padding: 8px;
-  border: 1px solid #ccc;
+  border: 1px solid lightgray;
 }
 
 .art-searcher button {
   font-weight: bold;
-  padding: 8px;
+  padding: 10px 0;
   background: lightgreen;
   color: black;
   border: none;
@@ -50,7 +48,7 @@ h1 {
 
 @media (max-width: 600px) {
   body {
-    margin: 10px;
+    margin: 11px;
   }
 
   h1 {
