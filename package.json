@@ -8,7 +8,7 @@
   },
   "scripts": {
     "start": "parcel",
-    "dev": "parcel",
+    "dev": "parcel src/index.html",
     "build": "parcel build",
     "lint": "eslint src"
   },
@@ -16,8 +16,10 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@eslint/js": "^9.37.0",
-    "eslint": "^9.37.0",
+    "@babel/core": "^7.28.5",
+    "@babel/preset-env": "^7.28.5",
+    "@eslint/js": "^9.38.0",
+    "eslint": "^9.38.0",
     "globals": "^16.4.0",
     "parcel": "^2.16.0"
   }
